@@ -1,3 +1,38 @@
+Test API : 
+=========================================================
+// Use auth routes for authentication endpoints
+app.use('/api/users/', userRoutes);
+// Use auth routes for authentication endpoints
+app.use('/api/auth', authRoutes);
+// Use profile routes for profile endpoints
+app.use('/api/profileRoutes', profileRoutes);
+// Use biodata routes for biodata endpoints
+app.use('/api/biodata', biodataRoutes);
+http://localhost:5000/api/auth/login
+http://localhost:5000/api/auth/register
+http://localhost:5000/api/biodata
+http://localhost:5000/api/biodata/${id}
+http://localhost:5000/api/auth/register
+============================================================
+
+Routes Endpoint :
+============================================================
+<Route path="/signup" element={<Signup />} />
+<Route path="/login" element={<Login />} />
+<Route path="/admin" element={<AdminPanel />} />
+<Route path="/" element={isLoggedIn ? <Navigate to="/dashboard" /> : <Navigate to="/login" />} />
+<Route path="/biodata" element={<EntryBiodata />} />
+<Route path="/detail/:id" element={<DetailBiodata />} />
+<Route path="/add" element={<AddBiodata />} />
+<Route path="/edit/:id" element={<EditBiodata />} />
+============================================================
+
+biodata app files frontend cara start npm install, npm start
+testbaru files backend cara start npm install node app.js
+db name biodata_db
+============================================================
+
+
 Login Page
 ![image](https://github.com/user-attachments/assets/1a2e89e9-17d6-4383-9cc8-679bbe680dd8)
 
@@ -20,11 +55,6 @@ Details Page
 ![image](https://github.com/user-attachments/assets/3bbc8d10-c5ee-48f5-9706-29c47470b095)
 ![image](https://github.com/user-attachments/assets/306e4690-34eb-40f5-932e-18c694d4b2ca)
 ![image](https://github.com/user-attachments/assets/48778359-f014-4777-9d12-c38398b1a21d)
-
-
-biodata app files frontend cara start npm install, npm start
-testbaru files backend cara start npm install node app.js
-db name biodata_db
 
 Pictures db
 ![image](https://github.com/user-attachments/assets/b52b45fe-c44f-490c-a3da-a505f0bf70b8)
